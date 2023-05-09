@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 public class EmailService {
     @Autowired
     EmailRepository emailRepository;
-
     @Autowired
     private JavaMailSender emailSender;
     public EmailModel sendEmail(EmailModel emailModel) {
@@ -35,6 +34,5 @@ public class EmailService {
         } finally{
             return emailRepository.save(emailModel);
         }
-
     }
 }
